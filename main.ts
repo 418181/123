@@ -46,7 +46,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(step)
 })
 input.onButtonPressed(Button.AB, function () {
-    basic.showString("" + 25 * step + "cm")
+    basic.showString("" + 1 * step + "m")
     basic.showNumber(input.temperature())
 })
 input.onButtonPressed(Button.B, function () {
