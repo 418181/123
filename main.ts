@@ -46,7 +46,8 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(step)
 })
 input.onButtonPressed(Button.AB, function () {
-    basic.showString("" + 1 * step + "m")
+    basic.showString("" + 0.5 * step + "m")
+    basic.pause(500)
     basic.showNumber(input.temperature())
 })
 input.onButtonPressed(Button.B, function () {
@@ -66,7 +67,7 @@ basic.forever(function () {
     } else if (step == 5000) {
         basic.showIcon(IconNames.Happy)
         music.playSoundEffect(music.builtinSoundEffect(soundExpression.spring), SoundExpressionPlayMode.UntilDone)
-    } else if (input.temperature() > 35) {
+    } else if (input.temperature() > 40) {
         basic.showString("hot")
         music.playSoundEffect(music.builtinSoundEffect(soundExpression.slide), SoundExpressionPlayMode.UntilDone)
     }
